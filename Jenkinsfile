@@ -7,7 +7,7 @@ node{
         sh 'mvn clean package'
     }
     stage('test'){
-       junit skipMarkingBuildUnstable: true, skipOldReports: true, testResults: '/*.xml' 
+       junit skipMarkingBuildUnstable: true, skipOldReports: true, testResults: '**/*.xml' 
    }
     
     stage('deploy to tomcat'){
